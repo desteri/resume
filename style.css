@@ -1,0 +1,179 @@
+:root {
+  --main-font: "Comfortaa", cursive;
+  --sec-font: "Roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--sec-font);
+  font-size: 1em;
+  font-weight: 300;
+  color: #263228;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul:not(.column ul) {
+  list-style: none;
+}
+
+.container {
+  max-width: 840px;
+  width: 100%;
+  margin: 100px auto;
+  padding: 40px;
+  box-shadow: 1px 2px 1px -1px #0003, 0 -1px 1px #00000024, 0 1px 3px #0000001f;
+}
+
+header {
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--main-font);
+}
+
+h1,
+h2 {
+  font-size: 2.5em;
+}
+
+h1,
+h3 {
+  font-weight: 300;
+}
+
+h1,
+h2,
+.data,
+.links,
+h3,
+.achiev {
+  margin-bottom: 15px;
+}
+
+h1,
+h3 {
+  position: relative;
+}
+
+h1::before {
+  content: "";
+  background-color: #fffbb9;
+  position: absolute;
+  height: 1em;
+  width: 60%;
+  right: 0;
+  top: 8px;
+  z-index: -1;
+}
+
+h3::before {
+  content: "";
+  background-color: #fffbb9;
+  position: absolute;
+  height: 0.75em;
+  width: 3em;
+  margin: 0.8em 0 0;
+  z-index: -1;
+}
+
+.data,
+.links,
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.data li:not(.data li:last-child)::after,
+.links li:not(.links li:last-child)::after {
+  content: "|";
+  padding: 0 5px;
+}
+
+.links {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+header p {
+  margin: 0.5em 0;
+  text-align: left;
+}
+
+.breaker {
+  border-bottom: 1px solid #c7c7c7;
+  margin: 1.5em 0;
+  margin-left: -40px;
+  margin-right: -40px;
+}
+
+.skills > ul li {
+  margin-bottom: 5px;
+}
+
+.stars {
+  display: flex;
+  color: #ffc83d;
+}
+
+.stars li {
+  padding-right: 5px;
+}
+
+.skills,
+.education,
+.experience {
+  margin-bottom: 20px;
+}
+
+.education ul li p:nth-child(2) {
+  font-weight: 500;
+}
+
+.education ul li p:nth-child(3),
+.experience .job h4 + p,
+.achievements .achiev h4 + p {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.education ul li,
+.languages ul li {
+  margin-bottom: 10px ;
+}
+
+.languages span {
+  font-weight: 400;
+}
+
+.experience span {
+  font-family: var(--sec-font);
+  font-weight: 500;
+}
+
+@media screen and (max-width: 570px) {
+  .data {
+    flex-direction: column;
+  }
+
+  .data li:not(.data li:last-child)::after {
+    content: "";
+  }
+
+  main {
+    flex-wrap: wrap-reverse;
+  }
+}
