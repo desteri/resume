@@ -164,6 +164,10 @@ header p {
   font-weight: 500;
 }
 
+.job p a {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 570px) {
   .data {
     flex-direction: column;
