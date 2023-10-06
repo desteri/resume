@@ -103,13 +103,21 @@ main {
   padding: 0 5px;
 }
 
-.data:hover {
+.data li a:hover {
   text-decoration: underline;
 }
 
 .links {
   margin-bottom: 20px;
   font-size: 1.5em;
+}
+
+.links li a {
+  transition: .1s linear;
+}
+
+.links li a:hover {
+  color: #fffbb9;
 }
 
 header p {
