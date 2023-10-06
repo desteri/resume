@@ -103,6 +103,10 @@ main {
   padding: 0 5px;
 }
 
+.data:hover {
+  text-decoration: underline;
+}
+
 .links {
   margin-bottom: 20px;
   font-size: 1.5em;
